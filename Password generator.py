@@ -25,27 +25,24 @@ symbol_input = int(input("No. of symbols needed : "))
 #Main code
 #Generating random letter
 for i in range(0,letter_input):
-	str_index = random.randint(0,51)
-	password+=letter[str_index]
-
+	password+=random.choice(letter)
+	
 #Generating random number
 for i in range(0,number_input):
-	str_index = random.randint(0,9)
-	password+=number[str_index]
-
+	password  += random.choice(number)
+	
 #Genenrating random
 for i in range(0,symbol_input):
-	str_index = random.randint(0,13)
-	password+=symbol[str_index]
+	password += random.choice(symbol)
+	
 
 #Shuffling the password
 pass_len = letter_input + number_input + symbol_input
-for i in range(0,pass_len-1):
+for i in range(0,pass_len):
 	temp_list.append(i)
 random.shuffle(temp_list)
-for i in range(0,pass_len-1):
-	pswd+=password[temp_list[i]]
-
+for i in temp_list:
+	pswd+=password[i]
 	
 
 #Printing the output
