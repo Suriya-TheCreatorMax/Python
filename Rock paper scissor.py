@@ -18,9 +18,9 @@ out = comp + You
 
 #Main Code
 print(comp," ",You)
-if out==win[0] or out==win[1] or out==win[2] :
+if out in win :
 	print("You Win!")
-elif out==draw[0] or out==draw[1] or out==draw[2] :
+elif out in draw :
 	print("Its a draw")
 else :
 	print("You Lose :(")
