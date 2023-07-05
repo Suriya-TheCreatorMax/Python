@@ -18,13 +18,14 @@ disp_list =["  +-----+\n  |     |\n  |     |\n  O     |\n /|\    |\n / \    |\n 
 lives = 4		
 blank_check = 0
 answer_list = []
+print(disp_list[4])
 
 #Choose a random word
 Question_list = ["apple","orange","banana"]
-Question_word = Question_list[random.randint(0,len(Question_list)-1)]
+Question_word = random.choice(Question_list)
 
 #Empty dash list
-for i in range(0,len(Question_word)):
+for i in Question_word:
 	answer_list.append("_")
 
 #Main loop
@@ -39,8 +40,8 @@ while blank_check != len(Question_word) and lives!=0 :
 			answer_list[str_index] = guess
 		
 	#Check the number of blanks remaining
-	for str_index in range(0,len(Question_word)): 
-		if answer_list[str_index] != '_' :
+	for chr in answer_list: 
+		if chr != '_' :
 			blank_check+=1
 
 	#No. of lives remaining calculation
