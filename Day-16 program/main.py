@@ -24,8 +24,8 @@ while 1:
 		drink = inventory.find_drink(type)
 		if drink is None : continue
 		if cafeMachine.is_resource_sufficient(drink):
-			cashier.make_payment(drink.cost)
-			cafeMachine.make_coffee(drink)
+			if cashier.make_payment(drink.cost) :
+				cafeMachine.make_coffee(drink)
 		
 		
 				
