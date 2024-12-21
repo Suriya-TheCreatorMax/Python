@@ -9,9 +9,9 @@ import random
 inp = int(input(" What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors."))
 
 #Initializations
-choice = ["Stone","Paper","Scissors"]
-win = ["StonePaper","PaperScissor","ScissorsStone"]
-draw = ["StoneStone","PaperPaper","ScissorsScissors"]
+choice = ["Stone","Paper","Scissor"]
+win = ["StonePaper","PaperScissor","ScissorStone"]
+draw = ["StoneStone","PaperPaper","ScissorScissor"]
 comp = random.choice(choice)
 You = choice[inp]
 out = comp + You
